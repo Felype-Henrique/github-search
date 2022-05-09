@@ -40,6 +40,10 @@ const Result = () => {
     localStorage.setItem("favo", JSON.stringify(fav));
   }, [fav]);
 
+  ctx.repos.sort((a,b) => {
+    return b.stargazers_count - a.stargazers_count;
+  });
+
   return (
     <>
       <Header>
@@ -88,7 +92,7 @@ const Result = () => {
               <Stars>
                 <BiStar size={24} />
                 <Text>{repo.stargazers_count}</Text>
-                <button onClick={() => console.log(fav)}>console</button>
+                <button onClick={() => console.log(repo)}>console</button>
               </Stars>
             </Group>
           ))}
