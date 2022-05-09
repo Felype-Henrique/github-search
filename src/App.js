@@ -1,11 +1,17 @@
-import { BrowserRouter} from "react-router-dom";
+import React from "react";
 import Navigate from "./routes";
+import { BrowserRouter } from "react-router-dom";
+import GlobalStyle from "./styles/global";
+import { ContextProvider } from "./context/index";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navigate />
-    </BrowserRouter>
+    <ContextProvider>
+      <BrowserRouter>
+        <Navigate />
+      </BrowserRouter>
+      <GlobalStyle />
+    </ContextProvider>
   );
 }
 
