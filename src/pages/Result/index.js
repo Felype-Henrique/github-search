@@ -44,6 +44,9 @@ const Result = () => {
     return b.stargazers_count - a.stargazers_count;
   });
 
+  const msg = () => {
+    return alert("Repositório Adicionado aos Favoritos");
+  }
   return (
     <>
       <Header>
@@ -84,9 +87,7 @@ const Result = () => {
             <Group key={repo.id}>
               <TitleRep>
                 <TitleRepo>{repo.name}</TitleRepo>
-                <Button onClick={() => setFav([...fav, repo])}>
-                  <BiStar size={24} />
-                </Button>
+                <Button onClick={msg}><BiStar size={24} onClick={() => setFav([...fav, repo])}/></Button>
               </TitleRep>
               <Desc>{repo.description}</Desc>
               <Stars>

@@ -87,13 +87,17 @@ export const TitleRepo = styled.h1`
   color: #000000;
 `;
 
+export const Button = styled.button`
+  border: none;
+
+  svg:active{
+    color: #FFC700;
+  }
+`;
+
 export const TitleRep = styled.div`
   display: flex;
   justify-content: space-between;
-`;
-
-export const Button = styled.button`
-  border: none;
 `;
 
 export const Desc = styled.h2`
