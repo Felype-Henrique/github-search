@@ -1,10 +1,17 @@
 import React from "react";
-import {} from './styles'
+import { Logo, Page, SubTitle, Title } from "./styles";
+import SearchBar from "../../components/searchBar/index";
 
 const Home = () => {
   return (
-    <h1>Home</h1>
-  )
-}
+    <Page>
+      <Logo>
+        <Title>GitHub</Title>
+        <SubTitle>Search</SubTitle>
+      </Logo>
+      <SearchBar />
+    </Page>
+  );
+};
 
 export default Home;

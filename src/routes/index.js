@@ -6,7 +6,6 @@ import Result from "../pages/Result";
 import Favorites from "../pages/Favorites";
 
 const Navigate = () => {
-  
   return (
     <Routes>
       <Route path="/" element={<Home />} />
