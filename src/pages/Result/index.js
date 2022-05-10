@@ -39,7 +39,7 @@ const Result = () => {
   const [fav, setFav] = useState([]);
 
   useEffect(() => {
-    localStorage.setItem("favo", JSON.stringify(fav));
+    sessionStorage.setItem("favo", JSON.stringify(fav));
   }, [fav]);
 
   ctx.repos.sort((a, b) => {

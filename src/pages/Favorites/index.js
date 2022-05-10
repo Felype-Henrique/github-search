@@ -5,7 +5,7 @@ import {BiStar} from "react-icons/bi";
 
 const Favorites = () => {
   
-  const favo = localStorage.getItem('favo')
+  const favo = sessionStorage.getItem('favo')
   const repos = JSON.parse(favo);
   return (
     <>

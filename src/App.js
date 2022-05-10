@@ -7,7 +7,7 @@ import { ContextProvider } from "./context/index";
 function App() {
   return (
     <ContextProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Navigate />
       </BrowserRouter>
       <GlobalStyle />
