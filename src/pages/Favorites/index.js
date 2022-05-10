@@ -11,7 +11,7 @@ const Favorites = () => {
   return (
     <>
       <Header>
-        <Link to="/">
+        <Link to="/" style={{textDecoration: 'none'}}>
         <Title>REPOSITÓRIOS FAVORITOS</Title>
         </Link>
         <SearchBar/>

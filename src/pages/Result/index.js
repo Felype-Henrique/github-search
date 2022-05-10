@@ -51,7 +51,7 @@ const Result = () => {
   return (
     <>
       <Header>
-        <Link to="/">
+        <Link to="/" style={{textDecoration: 'none'}}>
           <Logo>
             <Title>GitHub</Title>
             <SubTitle>Search</SubTitle>
@@ -112,7 +112,7 @@ const Result = () => {
         </Main>
         <SideBar>
           <Repo>
-            <Link to="/">
+            <Link to="/favorites" style={{textDecoration: 'none'}}>
               <Repositories>
                 <BiStar size={34} color="#FFC700" />
                 <TitleFav>Repositórios favoritados</TitleFav>
