@@ -21,7 +21,7 @@ const SearchBar = () => {
       ctx.setRepos(repos.data);
       navigate(`/result`);
     } catch (err) {
-      console.log(err);
+      alert('Usuário não encontrado, por favor tente outro');
     }
   }
 

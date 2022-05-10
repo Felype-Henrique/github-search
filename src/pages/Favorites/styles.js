@@ -46,3 +46,12 @@ font-size: 20px;
 line-height: 24px;
 color: #757575;
 `;
+
+export const Link = styled.a`
+  text-decoration: none
+`;
+
+export const RepoHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;

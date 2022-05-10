@@ -69,13 +69,12 @@ color: #757575;
 `;
 
 export const Main = styled.div`
-   margin: 90px;
+   margin: 50px;
 `;
 
 export const Group = styled.div`
   position: relative;
-  margin-bottom: 80px;
-  height: 105px;
+  margin: 40px;
 `;
 
 export const TitleRepo = styled.h1`
@@ -89,6 +88,7 @@ export const TitleRepo = styled.h1`
 
 export const Button = styled.button`
   border: none;
+  cursor: pointer;
 
   svg:active{
     color: #FFC700;
@@ -119,10 +119,22 @@ export const Repo = styled.div`
    width: 190px;
 `;
 
+export const Link = styled.a`
+  text-decoration: none
+`;
+
 export const TitleFav = styled.h1`
   font-family: 'Rubik';
   font-weight: 300;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
+`;
+
+export const Repositories = styled.div`
+  display: flex;
+  
+  svg{
+    margin: 8px;
+  }
 `;
