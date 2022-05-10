@@ -46,19 +46,17 @@ const Result = () => {
     return b.stargazers_count - a.stargazers_count;
   });
 
-  let totalStar = 0
-  ctx.repos.map((repo) => (
-    totalStar += repo.stargazers_count
-  ))
+  let totalStar = 0;
+  ctx.repos.map((repo) => (totalStar += repo.stargazers_count));
   return (
     <>
       <Header>
-      <Link href="/">
-      <Logo>
-          <Title>GitHub</Title>
-          <SubTitle>Search</SubTitle>
-        </Logo>
-      </Link>
+        <Link href="/">
+          <Logo>
+            <Title>GitHub</Title>
+            <SubTitle>Search</SubTitle>
+          </Logo>
+        </Link>
         <SearchBar />
       </Header>
       <Columns>
@@ -68,11 +66,17 @@ const Result = () => {
           <UserName>{ctx.userData?.login}</UserName>
           <Organization>
             <BiBriefcaseAlt2 size={24} />
-            <Text>{ctx.userData?.company ? ctx.userData?.company : 'Não informado'}</Text>
+            <Text>
+              {ctx.userData?.company ? ctx.userData?.company : "Não informado"}
+            </Text>
           </Organization>
           <Organization>
             <BiLocationPlus size={24} />
-            <Text>{ctx.userData?.location ? ctx.userData?.location : 'Não informado'}</Text>
+            <Text>
+              {ctx.userData?.location
+                ? ctx.userData?.location
+                : "Não informado"}
+            </Text>
           </Organization>
           <Organization>
             <BiStar size={24} />
@@ -92,7 +96,9 @@ const Result = () => {
             <Group key={repo.id}>
               <TitleRep>
                 <TitleRepo>{repo.name}</TitleRepo>
-                <Button onClick={() => alert("Repositório Adicionado aos Favoritos")}>
+                <Button
+                  onClick={() => alert("Repositório Adicionado aos Favoritos")}
+                >
                   <BiStar size={24} onClick={() => setFav([...fav, repo])} />
                 </Button>
               </TitleRep>
@@ -108,16 +114,15 @@ const Result = () => {
           <Repo>
             <Link href="/favorites">
               <Repositories>
-              <BiStar size={34} color="#FFC700"/>
-              <TitleFav>Repositórios favoritados</TitleFav>
-
+                <BiStar size={34} color="#FFC700" />
+                <TitleFav>Repositórios favoritados</TitleFav>
               </Repositories>
             </Link>
           </Repo>
           <Repo>
             <Repositories>
-            <BiStar size={34} />
-            <TitleFav>Repositórios Não favoritados</TitleFav>
+              <BiStar size={34} />
+              <TitleFav>Repositórios Não favoritados</TitleFav>
             </Repositories>
           </Repo>
         </SideBar>
