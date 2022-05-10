@@ -19,7 +19,6 @@ import {
   TitleFav,
   TitleRep,
   Button,
-  Link,
   Repositories,
 } from "./styles";
 import SearchBar from "../../components/searchBar/index";
@@ -32,6 +31,7 @@ import {
 import { IoPeopleSharp } from "react-icons/io5";
 
 import { context } from "../../context";
+import { Link } from "react-router-dom";
 
 const Result = () => {
   const ctx = useContext(context);
@@ -39,7 +39,7 @@ const Result = () => {
   const [fav, setFav] = useState([]);
 
   useEffect(() => {
-    sessionStorage.setItem("favo", JSON.stringify(fav));
+    localStorage.setItem("favo", JSON.stringify(fav));
   }, [fav]);
 
   ctx.repos.sort((a, b) => {
@@ -51,7 +51,7 @@ const Result = () => {
   return (
     <>
       <Header>
-        <Link href="/">
+        <Link to="/">
           <Logo>
             <Title>GitHub</Title>
             <SubTitle>Search</SubTitle>
@@ -112,7 +112,7 @@ const Result = () => {
         </Main>
         <SideBar>
           <Repo>
-            <Link href="/favorites">
+            <Link to="/">
               <Repositories>
                 <BiStar size={34} color="#FFC700" />
                 <TitleFav>Repositórios favoritados</TitleFav>

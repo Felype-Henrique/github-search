@@ -119,10 +119,6 @@ export const Repo = styled.div`
    width: 190px;
 `;
 
-export const Link = styled.a`
-  text-decoration: none
-`;
-
 export const TitleFav = styled.h1`
   font-family: 'Rubik';
   font-weight: 300;

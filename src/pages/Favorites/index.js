@@ -1,16 +1,17 @@
 import React from "react";
-import {Description, Group, Header, Link, RepoHeader, Star, Stars, Title, TitleGroup} from './styles'
+import {Description, Group, Header, RepoHeader, Star, Stars, Title, TitleGroup} from './styles'
 import SearchBar from '../../components/searchBar/index'
 import {BiStar} from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Favorites = () => {
   
-  const favo = sessionStorage.getItem('favo')
+  const favo = localStorage.getItem('favo')
   const repos = JSON.parse(favo);
   return (
     <>
       <Header>
-        <Link href="/">
+        <Link to="/">
         <Title>REPOSITÓRIOS FAVORITOS</Title>
         </Link>
         <SearchBar/>
